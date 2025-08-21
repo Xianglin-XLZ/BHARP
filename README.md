@@ -3,24 +3,27 @@
 This repository contains code for the simulations in the manuscript:  
 *"Identifying Treatment Effect Heterogeneity with Bayesian Hierarchical Adjustable Random Partition (BHARP) in Adaptive Enrichment Trials"*.
 
-Maintained by Xianglin Zhao
+Maintained by Xianglin Zhao.
 
 ## Structure
 
 - `functions/`  
   Core functions and model implementations:
-  - `BHARP.cpp` — rjMCMC implementation of BHARP (split–merge sampler)  
+  - `BHARP.cpp` — rjMCMC implementation of BHARP 
   - `BHARP_model.R` — R wrapper for BHARP  
   - `BHM_model.R`, `IND_model.R`, `BLAST_model.R`, `BART_model.R` — comparator models  
-  - Helper functions: `helper_metric.R`, `helper_trial.R`
+  - `helper_metric.R`, `helper_trial.R` — helper functions
 
 - `scripts/`  
-  Scripts for running simulation studies.
+  Scripts for running simulation studies.  
+  - `BHARP_sim.R` generates 500 datasets for each scenario and analyzes them with BHARP.  
+  - Other method scripts (e.g., BHM, IND, BLAST, BART) do not generate datasets; they analyze the same datasets created by `BHARP_sim.R`.
+
 
 - `results/`  
-  Output directory for simulation results.  
-  Subfolder `simulation/` stores CSV files written by samplers under each scenario.  
-  (The actual datasets are removed but can be reproduced from the provided code.)
+  Output directory, stores files written by samplers.  
+  Generated datasets are removed but can be reproduced from the provided code.
+  Summary results (RMSE, MAE, variance) for each scenario (S1–S9) are provided in `.txt` files (e.g., `S1_BHARP_sim_results.txt`, `S1_BART_sim_results.txt`, etc.).
 
 ## Requirements
 
@@ -30,11 +33,8 @@ Maintained by Xianglin Zhao
 
 ## Usage
 
-1. Compile the C++ functions via Rcpp:
-   ```r
-   Rcpp::sourceCpp("functions/BHARP.cpp")
-   ```
-   
-2. Run simulation scripts in scripts/.
+1. Run `scripts/BHARP_sim.R` to generate data and run BHARP simulation.  
+   This script must be run first, as it creates the simulation datasets.  
 
-3. Results will be written to results/simulation/ as CSV files.
+2. Run other methods in `scripts/` to process the output in `results/simulation/`.
+Each script automatically loads the required functions from `functions/`.
