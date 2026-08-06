@@ -124,4 +124,5 @@ If you use this code, please cite the associated BHARP manuscript.
 ```
 ## License
 
-No license has been specified yet. Until a license is added, all rights are reserved by the copyright holders.
+
+This project is licensed under the MIT License. See `LICENSE` for details.
