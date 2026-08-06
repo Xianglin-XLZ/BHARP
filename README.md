@@ -114,6 +114,7 @@ results/trial_design/
 
 If you use this code, please cite the associated BHARP manuscript. 
 
+```bibtex
 @article{zhao2025identifying,
   title={Identifying treatment effect heterogeneity with Bayesian hierarchical adjustable random partition in adaptive enrichment trials},
   author={Zhao, Xianglin and Golchi, Shirin and Gouin, Jean-Philippe and Dasgupta, Kaberi},
