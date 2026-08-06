@@ -121,7 +121,7 @@ If you use this code, please cite the associated BHARP manuscript.
   journal={arXiv preprint arXiv:2508.16523},
   year={2025}
 }
-
+```
 ## License
 
 No license has been specified yet. Until a license is added, all rights are reserved by the copyright holders.
