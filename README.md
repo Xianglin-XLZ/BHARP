@@ -106,13 +106,20 @@ results/trial_design/
 ## Reproducibility notes
 
 - The supplied scripts use fixed random seeds.
-- The default configurations run 500 simulation replications and may take substantial time.
+- The default configurations run 500 simulation replications.
 - Model output and generated datasets can require considerable disk space.
 - Review the configuration files before running the full simulations.
 
 ## Citation
 
-If you use this code, please cite the associated BHARP manuscript. Citation details will be added when available.
+If you use this code, please cite the associated BHARP manuscript. 
+
+@article{zhao2025identifying,
+  title={Identifying treatment effect heterogeneity with Bayesian hierarchical adjustable random partition in adaptive enrichment trials},
+  author={Zhao, Xianglin and Golchi, Shirin and Gouin, Jean-Philippe and Dasgupta, Kaberi},
+  journal={arXiv preprint arXiv:2508.16523},
+  year={2025}
+}
 
 ## License
 
